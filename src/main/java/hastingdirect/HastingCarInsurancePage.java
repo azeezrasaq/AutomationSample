@@ -14,8 +14,8 @@ public class HastingCarInsurancePage extends BaseMain{
 		WebElement carinstab = doAction("xpath", OR.getProperty("carinsurancetab"));
 		carinstab.click();
 
-		WebElement carquote = doAction("xpath", OR.getProperty("quotetab"));
-		carquote.click();
+	//	WebElement carquote = doAction("xpath", OR.getProperty("quotetab"));
+		//carquote.click();
 		
 		WebElement findcar = doAction("xpath", OR.getProperty("findvehicleone"));
 		findcar.sendKeys("SF02UMO");
@@ -25,7 +25,7 @@ public class HastingCarInsurancePage extends BaseMain{
 
 		WebElement caraboutus = doAction("xpath", OR.getProperty("selectcar"));
 		String aboutcartext = caraboutus.getText(); 
-		Assert.assertEquals("Important information", aboutcartext);
+		Assert.assertEquals("Select your vehicle", aboutcartext);
 		
 		System.out.println("Show me the text : "  +aboutcartext );
 		
